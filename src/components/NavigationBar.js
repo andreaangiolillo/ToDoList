@@ -9,6 +9,7 @@ function NavigationBar(){
 
           <a className='navbar-brand' href='#'>
             <img src={logo} className="App-logo" alt="logo" height='100px'/>
+          React To do list
           </a>
 
           <button className='navbar-toggler' type='button' data-toggle='collapse' data-target="#navbarText" aria-controls='navbarText' aria-expanded="false" aria-label="Toggle navigation">
