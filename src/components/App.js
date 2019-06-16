@@ -1,13 +1,12 @@
 import React from 'react';
 import '../App.css';
-import ReactLogo from './ReactLogo';
-import CheckBox from './CheckBox'
+import CheckBox from './CheckBox';
+import NavigationBar from './NavigationBar';
 
 function App() {
   return (
     <div className="MainContainer">
-
-      <ReactLogo />
+      <NavigationBar />
       <div>
         <CheckBox />
         <CheckBox />
