@@ -5,7 +5,7 @@ import NavigationBar from './NavigationBar';
 
 function App() {
   return (
-    <div className="MainContainer">
+    <div className="MainContainer" className="todo-list">
       <NavigationBar />
       <div>
         <CheckBox />
