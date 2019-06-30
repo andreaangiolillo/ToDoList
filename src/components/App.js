@@ -8,21 +8,41 @@ import todosData from '../data/testData.js';
 class App extends React.Component{
   constructor(){
     super();
+    this.handleOnClick = this.handleOnClick.bind(this);
+
     this.state={
-      todoList: todosData.map(item => (<CheckBox key={item.id} item={item} />))
+      toDoList: todosData
     }
+
   }
 
+
+  handleOnClick(id){
+    this.setState(oldState => {
+      const newToDoList = oldState.toDoList.map(
+        function(item){
+            if(item.id === id){
+              item.completed = !item.completed;
+            }
+            return item;
+        })
+      return {todoList: newToDoList};
+      })
+    }
+
+
   render(){
+    const toDoItem= this.state.toDoList.map(item => (<CheckBox key={item.id} item={item} handleOnClick={this.handleOnClick}/>))
     return(
       <div className="MainContainer" className="todo-list">
         <NavigationBar />
         <div>
-          {this.state.todoList}
+          {toDoItem}
         </div>
       </div>
     )
   }
+
 }
 
 export default App;
