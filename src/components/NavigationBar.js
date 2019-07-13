@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 
 function NavigationBar(){
   return(
-    <div>
+    <div className='col-sm-11'>
       <nav className='navbar navbar-expand-md navbar-white sticky-top'>
         <div className='container-fluid'>
 
